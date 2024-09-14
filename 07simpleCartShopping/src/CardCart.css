@@ -1,0 +1,147 @@
+/* Layout Structure */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0a0b0a;
+    min-height: 100vh;
+}
+
+/* Cards Section */
+.cards-container {
+    background-color: rgb(9, 7, 58);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 0 1 60%;
+}
+
+.cards-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #b4e7e7;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #cccdf0;
+    color: #090909;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px; 
+    height: 350px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+    color: rgb(82, 33, 141);
+    font-size: 18px;
+}
+
+.card-image {
+    max-width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Cart Section */
+.cart-container {
+    background-color: rgb(140, 188, 81);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 0 1 35%;
+}
+
+.cart-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-manage {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-manage h4 {
+    font-size: 16px;
+    color: #555;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item h4 {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Button Styling */
+.button {
+    background-color: #4caf50; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+.r-button{
+    background-color: #4caf50; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049; 
+}
+
+.button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    color: #999;
+}
