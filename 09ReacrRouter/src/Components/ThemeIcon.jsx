@@ -1,7 +1,7 @@
+import { useState } from "react";
 
-import { useEffect, useState } from "react";
 
-const Nav = () => {
+const ThemeIcon = () => {
     const [theme, setTheme] = useState('light');
     const handleTheme = e => {
         console.log(e.target.value);
@@ -12,30 +12,7 @@ const Nav = () => {
             setTheme('light');
         }
     }
-    useEffect(() => {
-        localStorage.setItem('theme', theme);
-        const localTheme = localStorage.getItem('theme');
-        document.querySelector('html').setAttribute('data-theme', localTheme);
-    },[theme])
     return (
-      <div>
-        <div className="navbar bg-base-100 px-10 shadow-lg sticky z-10">
-          <div className="flex-1">
-            <a className="btn btn-ghost font-extrabold gap-0 text-secondary normal-case text-2xl">Byte<span className="text-primary">Blaze</span></a>
-          </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <a className="font-bold">Home</a>
-              </li>
-              <li>
-                <a className="font-bold text-primary">Blogs</a>
-              </li>
-              <li>
-                <a className='font-bold'>Bookmarks</a>
-              </li>
-            </ul>
-            
         <div>
             <label className="grid cursor-pointer place-items-center">
   <input
@@ -72,11 +49,7 @@ const Nav = () => {
   </svg>
 </label>
         </div>
-          </div>
-        </div>
-      </div>
     );
-  };
-  
-  export default Nav;
-  
+};
+
+export default ThemeIcon;
