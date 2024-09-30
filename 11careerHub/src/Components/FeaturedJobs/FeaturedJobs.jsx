@@ -17,8 +17,8 @@ const FeaturedJobs = () => {
     return (
         <div>
             <div className="text-center gap-4">
-                <div className="text-5xl">Featured Jobs :{jobs.length}</div>
-                <p>The jobs have individual features. They are interesting..</p>
+                <div className="text-4xl font-bold mb-4">Featured Jobs</div>
+                <p className="mb-3">The jobs have individual features. They are interesting..</p>
             </div>
             <div className="grid grid-cols-2 gap-6">
                 {
